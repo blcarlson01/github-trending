@@ -11,7 +11,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git push "https://${GITHUB_TOKEN}@github.com/blcarlson01/github-trending.git" origin master > /dev/null 2>&1
+  git push "https://${GITHUB_TOKEN}@github.com/blcarlson01/github-trending.git" origin HEAD:master > /dev/null 2>&1
 }
 
 setup_git
