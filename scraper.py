@@ -11,8 +11,7 @@ from git import repo
 from git import Git
 
 
-def git_add_commit_push(date, filename):
-    cmd_git_ssh = 'git config --global url.ssh://git@github.com/.insteadOf https://github.com/'
+def git_add_commit_push(date, filename):    
     cmd_git_add = 'git add {filename}'.format(filename=filename)
     cmd_git_commit = 'git commit -m "{date}"'.format(date=date)
     cmd_git_push = 'git push -u origin master'
@@ -27,7 +26,7 @@ def git_add_commit_push(date, filename):
         repo = git.Repo(search_parent_directories=True)
         repo.git.add(filename)    
         repo.git.push("origin", "HEAD:refs/for/master") 
-
+        repo = Repo(self.rorepo.working_tree_dir)
 
 def createMarkdown(date, filename):
     with open(filename, 'w') as f:
@@ -80,7 +79,7 @@ def job():
     scrape('java', filename)
 
     # git add commit push
-    git_add_commit_push(strdate, filename)
+    #git_add_commit_push(strdate, filename)
 
 
 if __name__ == '__main__':
