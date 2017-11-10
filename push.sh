@@ -12,8 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://${GITHUB_TOKEN}@github.com/blcarlson01/github-trending.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages gh-pages 
+  git push "https://${GITHUB_TOKEN}@github.com/blcarlson01/github-trending.git" master > /dev/null 2>&1
 }
 
 setup_git
