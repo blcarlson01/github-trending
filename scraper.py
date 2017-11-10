@@ -6,6 +6,9 @@ import requests
 import os
 import time
 from pyquery import PyQuery as pq
+import git
+from git import repo
+from git import Git
 
 
 def git_add_commit_push(date, filename):
@@ -14,10 +17,16 @@ def git_add_commit_push(date, filename):
     cmd_git_commit = 'git commit -m "{date}"'.format(date=date)
     cmd_git_push = 'git push -u origin master'
 
-    os.system(cmd_git_ssh)
-    os.system(cmd_git_add)
-    os.system(cmd_git_commit)
-    os.system(cmd_git_push)
+    #os.system(cmd_git_ssh)
+    #git(cmd_git_add)
+    #git(cmd_git_commit)
+    #git(cmd_git_push)
+    git_ssh_identity_file = os.path.expanduser('~/.ssh/id_rsa')
+    git_ssh_cmd = 'ssh -i %s' % git_ssh_identity_file
+    with Git().custom_environment(GIT_SSH_COMMAND=git_ssh_cmd):
+        repo = git.Repo(search_parent_directories=True)
+        repo.git.add(filename)    
+        repo.git.push("origin", "HEAD:refs/for/master") 
 
 
 def createMarkdown(date, filename):
