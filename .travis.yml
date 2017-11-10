@@ -8,5 +8,10 @@ script:
   - python3 scraper.py
 before_install:
   - chmod +x push.sh  
-after_success:
-  - ./push.sh
+deploy:
+	skip_cleanup: true
+ 	provider: script
+ 	github_token: $GITHUB_TOKEN
+    script: ./push.sh
+    on:
+      branch: master
