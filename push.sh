@@ -12,7 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin https://${GITHUB_TOKEN}@github.com/blcarlson01/github-trending.git > /dev/null 2>&1
+  git remote add origin https://${$GITHUB_USER}:${GITHUB_TOKEN}@github.com/blcarlson01/github-trending.git > /dev/null 2>&1
   git push -u origin master
 }
 
