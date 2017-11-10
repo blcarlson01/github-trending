@@ -2,9 +2,14 @@
 
 
 ## Intro
-Tracking the most popular Github repos, updated daily(Python version)
+Tracking the most popular Java Github repos, updated daily(Python version)
 
 inspired by [github-trending(Go Version)](https://github.com/josephyzhou/github-trending)
+inspired by and forked from https://github.com/bonfy/github-trending
+bonfy's special day:
+- [2017-03-29](https://github.com/bonfy/github-trending/blob/master/2017-03-29.md) - my repo [qiandao](https://github.com/bonfy/qiandao) record by github-trending(python)
+
+Most of the below are still bonfy's comments.  Will update as needed as I'm focused on Java Projects.
 
 
 ## Run
@@ -27,10 +32,6 @@ A better place to use the script is in VPS
 * Then you can run the code in VPS
 
 Thus the code will run never stop
-
-## Special Day
-
-- [2017-03-29](https://github.com/bonfy/github-trending/blob/master/2017-03-29.md) - my repo [qiandao](https://github.com/bonfy/qiandao) record by github-trending(python)
 
 ## Lisence
 
