@@ -13,7 +13,7 @@ commit_website_files() {
 
 upload_files() {
   git remote set-url origin https://blcarlson01@github.com/blcarlson01/github-trending.git > /dev/null 2>&1
-  git push -u origin master
+  git push --force --quiet "https://blcarlson01:${github_token}@github.com/blcarlson01/github-trending.git" orgin master > /dev/null 2>&1
 }
 
 setup_git
