@@ -5,7 +5,9 @@
 Tracking the most popular Java Github repos, updated daily(Python version)
 
 inspired by [github-trending(Go Version)](https://github.com/josephyzhou/github-trending)
+
 inspired by and forked from https://github.com/bonfy/github-trending
+
 bonfy's special day:
 - [2017-03-29](https://github.com/bonfy/github-trending/blob/master/2017-03-29.md) - my repo [qiandao](https://github.com/bonfy/qiandao) record by github-trending(python)
 

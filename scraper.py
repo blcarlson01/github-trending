@@ -9,10 +9,12 @@ from pyquery import PyQuery as pq
 
 
 def git_add_commit_push(date, filename):
+    cmd_git_ssh = 'git config --global url.ssh://git@github.com/.insteadOf https://github.com/'
     cmd_git_add = 'git add {filename}'.format(filename=filename)
     cmd_git_commit = 'git commit -m "{date}"'.format(date=date)
     cmd_git_push = 'git push -u origin master'
 
+    os.system(cmd_git_ssh)
     os.system(cmd_git_add)
     os.system(cmd_git_commit)
     os.system(cmd_git_push)
@@ -73,6 +75,4 @@ def job():
 
 
 if __name__ == '__main__':
-    while True:
         job()
-        time.sleep(24 * 60 * 60)
