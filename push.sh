@@ -11,6 +11,7 @@ commit_website_files() {
 }
 
 upload_files() {
+  git merge origin/master
   git push "https://${GITHUB_TOKEN}@github.com/blcarlson01/github-trending.git" master > /dev/null 2>&1
 }
 
