@@ -6,11 +6,7 @@ import requests
 import os
 import time
 from pyquery import PyQuery as pq
-import git
-from git import repo
-from git import Git
-
-
+'''
 def git_add_commit_push(date, filename):    
     cmd_git_add = 'git add {filename}'.format(filename=filename)
     cmd_git_commit = 'git commit -m "{date}"'.format(date=date)
@@ -27,7 +23,7 @@ def git_add_commit_push(date, filename):
         repo.git.add(filename)    
         repo.git.push("origin", "HEAD:refs/for/master") 
         repo = Repo(self.rorepo.working_tree_dir)
-
+'''
 def createMarkdown(date, filename):
     with open(filename, 'w') as f:
         f.write("## " + date + "\n")
