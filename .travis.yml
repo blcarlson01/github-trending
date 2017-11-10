@@ -9,9 +9,10 @@ script:
 before_install:
   - chmod +x push.sh  
 deploy:
-	skip_cleanup: true
- 	provider: script
- 	github_token: $GITHUB_TOKEN
+  - provider: script
     script: ./push.sh
+    skip_cleanup: true   
+    github_token: $GITHUB_TOKEN
+    
     on:
       branch: master
