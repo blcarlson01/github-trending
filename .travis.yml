@@ -8,6 +8,8 @@ script:
   - python3 scraper.py
 before_install:
   - chmod +x push.sh  
+after_success:
+  - ./push.sh
 deploy:
   provider: pages
   skip_cleanup: true
