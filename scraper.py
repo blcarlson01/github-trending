@@ -33,7 +33,7 @@ def scrape(language, filename, json_filename):
     }
 
     url = 'https://github.com/trending/{language}'.format(language=language)
-    r = requests.get(url, headers=HEADERS)
+    r = requests.get(url, headers=HEADERS, timeout=60)
     assert r.status_code == 200
 
     # print(r.encoding)
