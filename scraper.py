@@ -2,11 +2,11 @@
 
 import datetime
 import codecs
-import requests
 import os
 import time
 from pyquery import PyQuery as pq
 import json
+from security import safe_requests
 
 def createMarkdown(date, filename):
     with open(filename, 'w') as f:
@@ -33,7 +33,7 @@ def scrape(language, filename, json_filename):
     }
 
     url = 'https://github.com/trending/{language}'.format(language=language)
-    r = requests.get(url, headers=HEADERS, timeout=60)
+    r = safe_requests.get(url, headers=HEADERS, timeout=60)
     assert r.status_code == 200
 
     # print(r.encoding)
